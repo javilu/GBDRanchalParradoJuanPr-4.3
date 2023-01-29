@@ -61,8 +61,8 @@ ProxyPass /balancer-manager !
         BalancerMember http://172.31.30.166
 </Proxy>
 
-        ProxyPass / balancer://clusterasir/
-        ProxyPassReverse / balancer://clusterasir/
+ProxyPass / balancer://clusterasir/
+ProxyPassReverse / balancer://clusterasir/
 
 <Location /balancer-manager>
        SetHandler balancer-manager
