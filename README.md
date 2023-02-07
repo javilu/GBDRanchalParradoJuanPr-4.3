@@ -1,6 +1,6 @@
 # Práctica 4.3: Despliegue de una arquitectura EFS-EC2-MultiAZ.
 
-# Script utilizado en los clústeres.
+# Script utilizado en los servidores web.
 
 ```
 #!/bin/bash
@@ -21,7 +21,7 @@ systemctl start httpd
 systemctl enable httpd
 ```
 
-# Comandos utilizados en los clústeres.
+# Comandos utilizados en los servidores web.
 
 ```
 cd /var/www/html
@@ -69,4 +69,10 @@ ProxyPassReverse / balancer://clusterasir/
        Order Deny,Allow
        Allow from all
 </Location>
+```
+
+# Modificación realizada en el archivo /etc/fstab en el balanceador.
+
+```
+fs-03846e04368a76481.efs.us-east-1.amazonaws.com:/	/var/www/html/efs-mount	nfs	defaults	0	0
 ```
