@@ -71,7 +71,7 @@ ProxyPassReverse / balancer://clusterasir/
 </Location>
 ```
 
-# Modificación realizada en el archivo /etc/fstab en el balanceador.
+# Modificación realizada en el archivo /etc/fstab en los servidores web.
 
 ```
 fs-03846e04368a76481.efs.us-east-1.amazonaws.com:/	/var/www/html/efs-mount	nfs	defaults	0	0
